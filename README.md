@@ -5,64 +5,64 @@
 <h1 align="center">DronGPX</h1>
 
 <p align="center">
-  Escanea el QR del dron, abre el punto en Maverick. Sin internet, sin cuentas, en menos de 5 segundos.
+  Scan your drone's QR code, open the point in Maverick. No internet, no accounts, under 5 seconds.
 </p>
 
-## Qué hace
+## What it does
 
-Cuando el control de tu dron comparte una ubicación como código QR, DronGPX la lee con la cámara,
-arma un archivo GPX con ese punto y lo abre directo en **Maverick** para que quede marcado en el mapa.
-Todo el proceso ocurre en el teléfono: no se usa internet en ningún paso.
+When your drone's controller shares a location as a QR code, DronGPX reads it with the camera,
+builds a GPX file with that point, and opens it straight in **Maverick** so it shows up marked on
+the map. Everything happens on the phone: no internet is used at any step.
 
-## Cómo se usa
+## How to use it
 
-1. Abre DronGPX. La app entra directo a la cámara, lista para escanear.
-2. Apunta al QR que te muestra el control del dron.
-3. Listo: Maverick se abre solo, mostrando el punto marcado.
-4. Al volver a DronGPX (botón atrás o multitarea), la cámara ya está lista para el siguiente punto.
+1. Open DronGPX. The app goes straight to the camera, ready to scan.
+2. Point it at the QR code shown by the drone's controller.
+3. Done: Maverick opens on its own, showing the marked point.
+4. When you switch back to DronGPX (back button or recent apps), the camera is already waiting for
+   the next point.
 
-No hace falta tocar nada entre un punto y el siguiente, salvo la primera vez que el sistema pida el
-permiso de cámara.
+No taps are needed between one point and the next, except the first time the system asks for
+camera permission.
 
-## Qué QR puede leer
+## What QR codes it can read
 
-Cualquiera de estos formatos sirve, siempre que traiga una coordenada válida:
+Any of these formats work, as long as they carry a valid coordinate:
 
-- Un link de Google Maps compartido desde el control del dron (lo más común).
-- Un link con `/@lat,lon` (vista de mapa).
-- Un código con esquema `geo:lat,lon`.
-- Texto plano con la coordenada, tipo `-52.746968, -71.363613`.
+- A Google Maps link shared from the drone's controller (the most common case).
+- A link with `/@lat,lon` (map view).
+- A code using the `geo:lat,lon` scheme.
+- Plain text with the coordinate, like `-52.746968, -71.363613`.
 
-Si el QR no trae una coordenada reconocible, o los números están fuera de rango, la app te muestra
-el contenido leído y un mensaje de error en vez de abrir Maverick con datos incorrectos.
+If the QR code doesn't carry a recognizable coordinate, or the numbers are out of range, the app
+shows you the scanned content and a clear error instead of opening Maverick with bad data.
 
-## Dónde queda guardado el punto
+## Where the point is saved
 
-Cada punto escaneado se guarda como un archivo `.gpx` individual, nombrado con la fecha y hora del
-escaneo (por ejemplo `dron_2026-11-05_143205.gpx`), y además se intenta copiar a
-**Descargas/DronGPX** en el teléfono para que puedas encontrarlo o compartirlo después.
+Each scanned point is saved as its own `.gpx` file, named with the date and time of the scan (for
+example `dron_2026-11-05_143205.gpx`), and the app also tries to copy it into
+**Downloads/DronGPX** on the phone so you can find it or share it later.
 
-> En teléfonos con Android 9 o anterior, la copia a Descargas puede no aparecer — la app no pide
-> permiso de almacenamiento a propósito, solo permiso de cámara. El punto igual se abre en Maverick
-> sin problema.
+> On Android 9 or older, the copy to Downloads may not show up — the app intentionally doesn't ask
+> for storage permission, only camera permission. The point still opens in Maverick normally.
 
-## Si Maverick no está instalado
+## If Maverick isn't installed
 
-DronGPX necesita [Maverick Pro](https://play.google.com/store/apps/details?id=com.codesector.maverick.full)
-instalado para mostrar el punto automáticamente. Si no lo encuentra, te lo avisa en pantalla y te deja
-elegir otra app para abrir el archivo GPX desde un selector.
+DronGPX needs [Maverick Pro](https://play.google.com/store/apps/details?id=com.codesector.maverick.full)
+installed to show the point automatically. If it can't find it, it lets you know on screen and
+offers a chooser to open the GPX file with another app instead.
 
-## Permisos
+## Permissions
 
-DronGPX solo pide permiso de **cámara**, necesario para escanear el QR. La app no se conecta a
-internet: no tiene permiso de red, no usa cuentas, no manda datos a ningún servidor.
+DronGPX only asks for **camera** permission, needed to scan the QR code. The app never connects to
+the internet: it has no network permission, uses no accounts, and sends no data to any server.
 
-## Requisitos
+## Requirements
 
-- Android 8.0 (API 26) o superior.
-- Maverick Pro instalado, para que el punto se abra automáticamente al escanear.
+- Android 8.0 (API 26) or newer.
+- Maverick Pro installed, so the point opens automatically when you scan.
 
-## Instalación
+## Installation
 
-DronGPX no se distribuye por Google Play. Instala el APK directamente en el teléfono (sideload) y
-permite la instalación desde "orígenes desconocidos" cuando el sistema lo pida.
+DronGPX isn't distributed on Google Play. Install the APK directly on the phone (sideload), and
+allow installation from "unknown sources" when the system asks.
